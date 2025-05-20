@@ -5,12 +5,15 @@ Created on Wed Apr 03 10:02:48 2024
 @author: m.roska
 """
 
-#%%Packages
+# %%Packages
 import numpy as np
 import sys
 
-#%%Functions
-#Set Voltages
+
+# %%Functions
+
+
+# Set Voltages
 def check_times(tps_script, start_time_seconds):
     #test if last time in script is after start_time_seconds
     if len(tps_script) > 0:
