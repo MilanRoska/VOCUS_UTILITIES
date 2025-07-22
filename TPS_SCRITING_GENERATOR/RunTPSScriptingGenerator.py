@@ -200,6 +200,13 @@ tps_script = set_voltages(tps_script, start_time_seconds = total_start_time_seco
 tps_script = zero(tps_script, start_time_seconds = total_start_time_seconds + 95*60)
 
 
+
+#%% one VS
+#amb vscan
+tps_script = voltage_scan(tps_script, start_time_seconds = 1*60 , tuning_frequency_hz = set_tuning_frequency_hz, total_voltage = set_total_voltage, step_size_voltage = set_step_size_voltage)
+#reset votlages
+tps_script = set_voltages(tps_script, start_time_seconds = 2*60, imr_front_voltage = 450, imr_back_voltage = 0, ping = 10)
+
 # %% via example
 tps_script = via_turn_on(tps_script, start_time_seconds = 60 , ping = 10)
 tps_script = via_turn_off(tps_script, start_time_seconds = 120, ping = 10)
